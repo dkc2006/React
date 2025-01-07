@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- <h1>Hello from HTML!</h1> -->
+      <!-- <div id="parent">
+        <div id="child">
+          <h1 id="greeting">Hello form React</h1>
+          <h2 id="greetings2">Hello from react heading 2</h2>
+        </div>
+      </div> -->
+    </div>
+    <script>
+      // const message = document.createElement("h1");
+      // message.innerHTML = "Hello from JavaScript";
+      // const root = document.getElementById("root");
+      // root.appendChild(message);
+    </script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- <script>
+      const message = React.createElement(
+        "h1",
+        { id: "message 1" },
+        "Hello from React!"
+      );
+      const root = document.getElementById("root");
+      ReactDOM.render(message, root);
+    </script> -->
+
+    <script>
+      const message = React.createElement(
+        "div",
+        { id: "parent" },
+        React.createElement("div", { id: "child" }, [
+          React.createElement("h1", { id: "greeting" }, "Hello form React"),
+          React.createElement(
+            "h2",
+            { id: "greetings2" },
+            "Hello from react heading 2"
+          ),
+        ])
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(message);
+    </script>
+  </body>
+</html>
